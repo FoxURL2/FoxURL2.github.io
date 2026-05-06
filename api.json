@@ -6,8 +6,8 @@
     "client_id": "YOUR_MICROSOFT_CLIENT_ID",
     "redirect": "https://foxurl2.github.io/dashboard/",
     "scopes": "Files.ReadWrite User.Read"
-  }
+  },
   "accounts": {
     "sheet": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSqg7uCDoE-bU0WpQoJ9Lj1xbM35XmEzEpeCwKmqHktxEXg-NrBq_KwWkMW_8ihVtJSJp8dN-hSGvBH/pub?output=csv"
-  
+  }
 }
