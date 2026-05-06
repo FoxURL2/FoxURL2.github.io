@@ -1,0 +1,15 @@
+{
+  "name": "FoxURL",
+  "short_name": "FoxURL",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ff7a00",
+  "theme_color": "#ff7a00",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,10 +1,41 @@
-// Automatically load the FoxURL favicon on all pages that include main.js
+// Load favicon, Apple Touch Icons, and manifest for PWA behavior
 
-(function loadFavicon() {
-  const link = document.createElement("link");
-  link.rel = "icon";
-  link.href = "logo.png"; // your favicon source
-  document.head.appendChild(link);
+(function loadIconsAndManifest() {
+  // Favicon
+  const favicon = document.createElement("link");
+  favicon.rel = "icon";
+  favicon.href = "icon.png";
+  document.head.appendChild(favicon);
 
-  console.log("Favicon loaded by main.js");
+  // Apple Touch Icon
+  const appleIcon = document.createElement("link");
+  appleIcon.rel = "apple-touch-icon";
+  appleIcon.href = "icon.png";
+  document.head.appendChild(appleIcon);
+
+  // High‑res Apple icon
+  const appleIcon180 = document.createElement("link");
+  appleIcon180.rel = "apple-touch-icon";
+  appleIcon180.sizes = "180x180";
+  appleIcon180.href = "icon.png";
+  document.head.appendChild(appleIcon180);
+
+  // Manifest for PWA
+  const manifest = document.createElement("link");
+  manifest.rel = "manifest";
+  manifest.href = "manifest.json";
+  document.head.appendChild(manifest);
+
+  // iOS standalone mode
+  const iosMeta = document.createElement("meta");
+  iosMeta.name = "apple-mobile-web-app-capable";
+  iosMeta.content = "yes";
+  document.head.appendChild(iosMeta);
+
+  const iosStatusBar = document.createElement("meta");
+  iosStatusBar.name = "apple-mobile-web-app-status-bar-style";
+  iosStatusBar.content = "black-translucent";
+  document.head.appendChild(iosStatusBar);
+
+  console.log("App icons + manifest loaded by main.js");
 })();

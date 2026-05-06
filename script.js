@@ -1,2 +1,1 @@
-// Placeholder for future interactions
-console.log("script.js loaded");
+console.log("Homepage script loaded");
