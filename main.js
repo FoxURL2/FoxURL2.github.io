@@ -1,11 +1,11 @@
-// ===============================
-// FoxURL Global Script (main.js)
-// ===============================
+// =====================================
+// FoxURL Main Script (Updated 2026)
+// =====================================
 
-// -------------------------------
-// 1. Load favicon + PWA manifest
-// -------------------------------
-(function loadIconsAndManifest() {
+// -------------------------------------
+// 1. Load favicon + manifest + meta tags
+// -------------------------------------
+(function loadPWAAssets() {
   const favicon = document.createElement("link");
   favicon.rel = "icon";
   favicon.href = "https://foxurl2.github.io/logo.png";
@@ -27,26 +27,33 @@
   manifest.href = "manifest.json";
   document.head.appendChild(manifest);
 
+  // iOS standalone mode
   const iosMeta = document.createElement("meta");
   iosMeta.name = "apple-mobile-web-app-capable";
   iosMeta.content = "yes";
   document.head.appendChild(iosMeta);
+
+  // Chrome/Android standalone mode
+  const chromeMeta = document.createElement("meta");
+  chromeMeta.name = "mobile-web-app-capable";
+  chromeMeta.content = "yes";
+  document.head.appendChild(chromeMeta);
 })();
 
 
-// -------------------------------
+// -------------------------------------
 // 2. Register service worker (PWA)
-// -------------------------------
+// -------------------------------------
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/service-worker.js")
     .then(() => console.log("Service worker registered"))
-    .catch(err => console.error("SW registration failed:", err));
+    .catch(err => console.error("Service worker failed:", err));
 }
 
 
-// -------------------------------
+// -------------------------------------
 // 3. Chrome Install Button Support
-// -------------------------------
+// -------------------------------------
 let deferredPrompt;
 
 window.addEventListener("beforeinstallprompt", (e) => {
@@ -81,9 +88,22 @@ window.addEventListener("beforeinstallprompt", (e) => {
 });
 
 
-// -------------------------------
-// 4. Load API URL from api.txt
-// -------------------------------
+// -------------------------------------
+// 4. Dashboard Button Support
+// -------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const dashBtn = document.getElementById("dashboardButton");
+  if (dashBtn) {
+    dashBtn.addEventListener("click", () => {
+      window.location.href = "https://foxurl2.github.io/dashboard/";
+    });
+  }
+});
+
+
+// -------------------------------------
+// 5. Load API URL from api.txt
+// -------------------------------------
 let FOXURL_API = null;
 
 async function loadApiUrl() {
@@ -95,9 +115,9 @@ async function loadApiUrl() {
 }
 
 
-// -------------------------------
-// 5. Send file‑creation requests
-// -------------------------------
+// -------------------------------------
+// 6. Send file‑creation requests to backend
+// -------------------------------------
 async function foxurlCreate(type, title) {
   const api = await loadApiUrl();
 
@@ -116,9 +136,9 @@ async function foxurlCreate(type, title) {
 }
 
 
-// -------------------------------
-// 6. Expose creation helpers
-// -------------------------------
+// -------------------------------------
+// 7. Expose FoxURL creation functions
+// -------------------------------------
 window.FoxURL = {
   createDoc: (t) => foxurlCreate("createDoc", t),
   createSheet: (t) => foxurlCreate("createSheet", t),
@@ -130,4 +150,4 @@ window.FoxURL = {
   createScript: (t) => foxurlCreate("createScript", t)
 };
 
-console.log("FoxURL main.js loaded");
+console.log("FoxURL main.js fully updated");
