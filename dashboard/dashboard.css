@@ -9,14 +9,43 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
-#createButton {
+.create-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   padding: 10px 16px;
-  font-size: 16px;
-  background: #ff7a00;
-  color: white;
-  border: none;
-  border-radius: 6px;
+  font-size: 15px;
+  background: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 500;
+}
+
+.create-btn:hover {
+  background: #f7f8f8;
+}
+
+.create-icon {
+  width: 20px;
+  height: 20px;
+}
+
+#foxLoginBox {
+  padding: 20px;
+}
+
+.login-box {
+  margin: 20px;
+}
+
+#foxLoginBtn {
+  background: #fff;
+  border: 1px solid #dadce0;
+}
+
+#foxLoginBtn:hover {
+  background: #f7f8f8;
 }
 
 #createMenu {
@@ -45,23 +74,34 @@ body {
   color: #555;
 }
 
-button {
-  display: block;
-  width: 100%;
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 8px;
-  margin-bottom: 6px;
-  border: none;
+  width: 100%;
   background: #f0f0f0;
   border-radius: 6px;
+  border: none;
   cursor: pointer;
 }
 
-button:hover {
+.menu-item:hover {
   background: #e4e4e4;
 }
 
-button.disabled {
+.menu-item.disabled {
   background: #ddd;
   color: #888;
   cursor: not-allowed;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.disabled-section {
+  opacity: 0.4;
+  pointer-events: none;
 }

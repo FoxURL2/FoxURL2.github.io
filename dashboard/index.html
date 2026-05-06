@@ -11,7 +11,18 @@
 
   <!-- Top bar -->
   <div id="topbar">
-    <button id="createButton">Create</button>
+    <button id="createButton" class="create-btn">
+      <img src="https://foxurl2.github.io/logo.png" class="create-icon">
+      Create
+    </button>
+  </div>
+
+  <!-- Login box -->
+  <div id="foxLoginBox" class="hidden login-box">
+    <button id="foxLoginBtn" class="menu-item">
+      <img src="https://foxurl2.github.io/logo.png" class="icon">
+      Login with FoxURL
+    </button>
   </div>
 
   <!-- Create menu -->
@@ -20,37 +31,92 @@
     <!-- FoxURL section -->
     <div class="section">
       <h3>FoxURL</h3>
-      <button class="disabled">Fox Doc</button>
-      <button class="disabled">Fox Sheets</button>
-      <button class="disabled">Fox Slides</button>
-      <button class="disabled">Fox Mail</button>
+      <button class="menu-item disabled">
+        <img src="https://foxurl2.github.io/icons/fox-doc.png" class="icon">
+        Fox Doc
+      </button>
+      <button class="menu-item disabled">
+        <img src="https://foxurl2.github.io/icons/fox-sheets.png" class="icon">
+        Fox Sheets
+      </button>
+      <button class="menu-item disabled">
+        <img src="https://foxurl2.github.io/icons/fox-slides.png" class="icon">
+        Fox Slides
+      </button>
+      <button class="menu-item disabled">
+        <img src="https://foxurl2.github.io/icons/fox-mail.png" class="icon">
+        Fox Mail
+      </button>
     </div>
 
     <!-- Google section -->
     <div class="section" id="googleSection">
       <h3>Google</h3>
+
       <div id="googleNotLinked">
-        <button id="linkGoogleBtn">Link Google</button>
+        <button id="linkGoogleBtn" class="menu-item">
+          <img src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png" class="icon">
+          Link Google
+        </button>
       </div>
 
       <div id="googleTools" class="hidden">
-        <button onclick="FoxURL.createDoc('New Doc')">Google Doc</button>
-        <button onclick="FoxURL.createSheet('New Sheet')">Google Sheet</button>
-        <button onclick="FoxURL.createSlide('New Slides')">Google Slides</button>
-        <button onclick="FoxURL.createForm('New Form')">Google Form</button>
-        <button onclick="FoxURL.createDrawing('New Drawing')">Google Drawing</button>
-        <button onclick="FoxURL.createColab('New Colab')">Google Colab</button>
-        <button onclick="FoxURL.createScript('New Script')">Apps Script</button>
+        <button class="menu-item" onclick="FoxURL.createDoc('New Doc')">
+          <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_document_x16.png" class="icon">
+          Google Doc
+        </button>
+
+        <button class="menu-item" onclick="FoxURL.createSheet('New Sheet')">
+          <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_spreadsheet_x16.png" class="icon">
+          Google Sheet
+        </button>
+
+        <button class="menu-item" onclick="FoxURL.createSlide('New Slides')">
+          <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x16.png" class="icon">
+          Google Slides
+        </button>
+
+        <button class="menu-item" onclick="FoxURL.createForm('New Form')">
+          <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_form_x16.png" class="icon">
+          Google Form
+        </button>
+
+        <button class="menu-item" onclick="FoxURL.createDrawing('New Drawing')">
+          <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_drawing_x16.png" class="icon">
+          Google Drawing
+        </button>
+
+        <button class="menu-item" onclick="FoxURL.createColab('New Colab')">
+          <img src="https://colab.research.google.com/img/colab_favicon_256px.png" class="icon">
+          Google Colab
+        </button>
+
+        <button class="menu-item" onclick="FoxURL.createScript('New Script')">
+          <img src="https://www.gstatic.com/images/branding/product/1x/apps_script_48dp.png" class="icon">
+          Apps Script
+        </button>
       </div>
     </div>
 
     <!-- Microsoft section -->
     <div class="section">
       <h3>Microsoft</h3>
-      <button class="disabled">Link Microsoft</button>
-      <button class="disabled">Word</button>
-      <button class="disabled">Excel</button>
-      <button class="disabled">PowerPoint</button>
+      <button class="menu-item disabled">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="icon">
+        Link Microsoft
+      </button>
+      <button class="menu-item disabled">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Microsoft_Word_logo_%282013%E2%80%932019%29.svg" class="icon">
+        Word
+      </button>
+      <button class="menu-item disabled">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Microsoft_Excel_logo_%282013%E2%80%932019%29.svg" class="icon">
+        Excel
+      </button>
+      <button class="menu-item disabled">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_PowerPoint_logo_%282013%E2%80%932019%29.svg" class="icon">
+        PowerPoint
+      </button>
     </div>
 
   </div>
