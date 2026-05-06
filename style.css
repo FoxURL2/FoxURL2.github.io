@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ff7a00; /* Orange background */
+    display: flex;
+    height: 100vh;
+    color: white;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #1a1a1a;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff7a00;
+    text-align: center;
+}
+
+.sidebar a {
+    color: #ddd;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: #333;
+}
+
+/* Main content */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Search bar */
+.search-box input {
+    width: 400px;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+/* Quick links */
+.quick-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.quick-links a {
+    background: #1a1a1a;
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.quick-links a:hover {
+    background: #333;
+}
