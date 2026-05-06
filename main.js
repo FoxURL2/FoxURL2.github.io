@@ -1,5 +1,5 @@
 // =====================================
-// FoxURL Main Script (Updated 2026)
+// FoxURL Main Script (Google Only)
 // =====================================
 
 // -------------------------------------
@@ -102,24 +102,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // -------------------------------------
-// 5. Load API URL from api.txt
+// 5. Load API config from api.json
 // -------------------------------------
 let FOXURL_API = null;
 
-async function loadApiUrl() {
+async function loadApiConfig() {
   if (FOXURL_API) return FOXURL_API;
 
-  const res = await fetch("https://foxurl2.github.io/api.txt");
-  FOXURL_API = (await res.text()).trim();
+  const res = await fetch("https://foxurl2.github.io/api.json");
+  FOXURL_API = await res.json();
   return FOXURL_API;
 }
 
 
 // -------------------------------------
-// 6. Send file‑creation requests to backend
+// 6. Google file creation (via Apps Script)
 // -------------------------------------
 async function foxurlCreate(type, title) {
-  const api = await loadApiUrl();
+  const config = await loadApiConfig();
+  const api = config.google.endpoint;
 
   const res = await fetch(api, {
     method: "POST",
@@ -137,9 +138,16 @@ async function foxurlCreate(type, title) {
 
 
 // -------------------------------------
-// 7. Expose FoxURL creation functions
+// 7. Expose FoxURL global API
 // -------------------------------------
 window.FoxURL = {
+  // Google linking (Apps Script handles login)
+  linkGoogle: async () => {
+    const config = await loadApiConfig();
+    window.open(config.google.endpoint, "_blank");
+  },
+
+  // Google file creation
   createDoc: (t) => foxurlCreate("createDoc", t),
   createSheet: (t) => foxurlCreate("createSheet", t),
   createSlide: (t) => foxurlCreate("createSlide", t),
@@ -150,4 +158,4 @@ window.FoxURL = {
   createScript: (t) => foxurlCreate("createScript", t)
 };
 
-console.log("FoxURL main.js fully updated");
+console.log("FoxURL main.js fully updated (Google only)");

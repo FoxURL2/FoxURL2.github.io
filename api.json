@@ -1,0 +1,10 @@
+{
+  "google": {
+    "endpoint": "https://script.google.com/macros/s/AKfycbz1yWqwtJStGMJivxIup3L0xmXQiGjny5KKXJBiMGYjEMfCPxKRAq0mn_Jjf7vXciN4kA/exec"
+  },
+  "microsoft": {
+    "client_id": "YOUR_MICROSOFT_CLIENT_ID",
+    "redirect": "https://foxurl2.github.io/dashboard/",
+    "scopes": "Files.ReadWrite User.Read"
+  }
+}
