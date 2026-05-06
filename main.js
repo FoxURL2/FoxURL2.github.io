@@ -3,13 +3,19 @@
 (function loadIconsAndManifest() {
   const favicon = document.createElement("link");
   favicon.rel = "icon";
-  favicon.href = "icon.png";
+  favicon.href = "https://foxurl2.github.io/logo.png";
   document.head.appendChild(favicon);
 
   const appleIcon = document.createElement("link");
   appleIcon.rel = "apple-touch-icon";
-  appleIcon.href = "icon.png";
+  appleIcon.href = "https://foxurl2.github.io/logo.png";
   document.head.appendChild(appleIcon);
+
+  const appleIcon180 = document.createElement("link");
+  appleIcon180.rel = "apple-touch-icon";
+  appleIcon180.sizes = "180x180";
+  appleIcon180.href = "https://foxurl2.github.io/logo.png";
+  document.head.appendChild(appleIcon180);
 
   const manifest = document.createElement("link");
   manifest.rel = "manifest";
@@ -21,10 +27,3 @@
   iosMeta.content = "yes";
   document.head.appendChild(iosMeta);
 })();
-
-// Register service worker (required for Chrome install button)
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js")
-    .then(() => console.log("Service worker registered"))
-    .catch(err => console.error("SW registration failed:", err));
-}
