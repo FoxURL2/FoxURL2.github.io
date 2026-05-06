@@ -1,37 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>FoxURL</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoxURL – innovate your connection</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
 
-<!-- Sidebar -->
-<div class="sidebar">
-    <div class="logo">🦊 FoxURL</div>
-    <a href="#">Home</a>
-    <a href="#">Bookmarks</a>
-    <a href="#">Settings</a>
-    <a href="#">About</a>
-</div>
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="https://FoxURL.github.io/logo.png" alt="FoxURL Logo" class="logo">
+    <h1>FoxURL</h1>
+    <p class="tagline">Innovate your connection</p>
+    <p class="tagline">Featured links</p>
 
-<!-- Main content -->
-<div class="main">
-    <h1>Welcome to FoxURL</h1>
-
-    <div class="search-box">
-        <input id="searchInput" type="text" placeholder="Search the web...">
+    <div class="hero-buttons">
+      <a href="https://foxurl.github.io/apps/clock" class="btn">Clock ⏰</a>
+      <a href="https://foxurl.github.io/contact/foxpower/" class="btn">Contact Foxpower</a>
+      <a href="https://foxurl.github.io/apps" class="btn">See all apps</a>
+      <a href="https://foxurl.github.io/releases.html" class="btn">Releases</a>
     </div>
+  </header>
 
-    <div class="quick-links">
-        <a href="https://google.com">Google</a>
-        <a href="https://youtube.com">YouTube</a>
-        <a href="https://reddit.com">Reddit</a>
-        <a href="https://github.com">GitHub</a>
-    </div>
-</div>
+  <!-- Search Widget -->
+  <div id="foxurl-search-widget">
+    <input id="foxurl-search-input" type="text" placeholder="Search…">
+    <div id="foxurl-search-results"></div>
+  </div>
 
-<script src="script.js"></script>
+  <!-- Main Content -->
+  <main id="main">
+    <section class="content">
+      <h2>Welcome to FoxURL</h2>
+      <p>
+        At FoxURL, we believe in creating smarter, faster, and more connected experiences.
+        Whether you're sharing links, innovating online, or exploring digital creativity —
+        FoxURL helps you make every connection matter.
+      </p>
+    </section>
+
+    <section class="content" id="explore">
+      <h2>Explore</h2>
+      <div class="explore-links">
+        <a href="https://foxurl.github.io/apps" class="btn">Apps ⏰</a>
+        <a href="https://foxurl.github.io/contact/foxpower" class="btn">Contact ⚡</a>
+        <a href="https://foxurl.github.io/releases.html" class="btn">Releases</a>
+      </div>
+    </section>
+
+    <iframe id="appFrame" src="" style="display:none;"></iframe>
+  </main>
+
+  <!-- Sidebar -->
+  <button id="sidebarToggle">☰ Explore</button>
+
+  <aside id="sidebar">
+    <h2>Explore</h2>
+    <a href="https://foxurl.github.io/apps" class="sidebar-btn">Apps</a>
+    <a href="https://foxurl.github.io/releases.html" class="sidebar-btn">Releases</a>
+    <a href="https://foxurl.github.io/contact/foxpower" class="sidebar-btn">Contact ⚡</a>
+
+    <a href="https://foxurl.github.io/apps/Cat-feeding" class="sidebar-btn">Cat feeding</a>
+    <a href="https://foxurl.github.io/apps/clock" class="sidebar-btn">Clock</a>
+    <a href="https://foxurl.github.io/apps/internet-speed-test" class="sidebar-btn">Internet speed test</a>
+    <a href="https://foxurl.github.io/apps/wordle_solver.html" class="sidebar-btn">Wordle solver</a>
+    <a href="https://foxurl.github.io/send.html" class="sidebar-btn">Test</a>
+  </aside>
+
 </body>
 </html>
