@@ -5,24 +5,35 @@
   <title>FoxURL Login</title>
   <link rel="icon" href="https://foxurl2.github.io/logo.png">
   <link rel="stylesheet" href="login.css">
+  <script src="../main.js" defer></script>
   <script src="login.js" defer></script>
-  <script src="https://foxurl2.github.io/main.js" defer></script>
-
 </head>
 
 <body>
 
   <div class="login-box">
+
     <img src="https://foxurl2.github.io/logo.png" class="logo">
 
-    <h1>FoxURL Login</h1>
+    <h1>Sign in</h1>
+    <p class="subtitle">to continue to FoxURL</p>
 
-    <input id="email" type="email" placeholder="Email">
-    <input id="password" type="password" placeholder="Password">
+    <!-- STEP 1: EMAIL -->
+    <div id="emailStep">
+      <input id="email" type="email" placeholder="Email" autocomplete="username">
+      <button id="nextBtn">Next</button>
+    </div>
 
-    <button id="loginBtn">Login</button>
+    <!-- STEP 2: PASSWORD -->
+    <div id="passwordStep" class="hidden">
+      <p id="emailDisplay" class="email-display"></p>
+      <input id="password" type="password" placeholder="Password" autocomplete="current-password">
+      <button id="loginBtn">Login</button>
+    </div>
 
-    <p id="error" class="error hidden">Invalid email or password</p>
+    <p id="connecting" class="connecting hidden">Connecting to FoxURL…</p>
+    <p id="error" class="error hidden"></p>
+
   </div>
 
 </body>
