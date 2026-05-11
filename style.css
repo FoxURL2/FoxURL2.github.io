@@ -1,14 +1,165 @@
+/* GENERAL */
 body {
   margin: 0;
-  padding: 0;
-  background: #ff7a00; /* FoxURL orange */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  overflow-x: hidden;
 }
 
-.logo {
-  width: 160px;
+/* BACKGROUND SHAPES */
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+  animation: float 10s infinite ease-in-out;
+}
+
+.shape1 {
+  width: 300px;
+  height: 300px;
+  background: #ff7a00;
+  top: -80px;
+  left: -80px;
+}
+
+.shape2 {
+  width: 250px;
+  height: 250px;
+  background: #ffb347;
+  bottom: -60px;
+  right: -60px;
+}
+
+.shape3 {
+  width: 200px;
+  height: 200px;
+  background: #ffd699;
+  top: 40%;
+  left: 70%;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 120px 20px 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.fox-mascot {
+  width: 140px;
+  animation: bounce 2.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.title {
+  font-size: 48px;
+  margin: 10px 0 0;
+  color: #333;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 8px;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.primary {
+  background: #ff7a00;
+  color: white;
+}
+
+.primary:hover {
+  background: #e86d00;
+}
+
+.secondary {
+  border: 2px solid #ff7a00;
+  color: #ff7a00;
+}
+
+.secondary:hover {
+  background: #ff7a00;
+  color: white;
+}
+
+/* FEATURE CARDS */
+.features {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card-icon {
+  width: 40px;
+  margin-bottom: 12px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fafafa;
   margin-top: 40px;
+}
+
+footer a {
+  margin: 0 10px;
+  color: #555;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
