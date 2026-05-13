@@ -1,6 +1,6 @@
 {
   "google": {
-    "endpoint": "https://script.google.com/macros/s/AKfycbwmHl0Z1-gCfTjy1rYyWZMqZ-ucCU4MDnrnBYoqq9w0SiWdsEZ_kCbCo49BcFPyShZZYA/exec"
+    "endpoint": "https://script.google.com/macros/s/AKfycbwafwfSt87gU1bAbtRfYqicdpB0KnM5VbOUOiny4uITdxpcAKgM0V8K1ibflHFd_lyprQ/exec"
   },
   "microsoft": {
     "client_id": "YOUR_MICROSOFT_CLIENT_ID",
